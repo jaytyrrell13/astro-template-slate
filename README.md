@@ -1,5 +1,7 @@
 # Slate Astro Template
 
+![Slate Astro Template](public/slate-preview.png)
+
 Features:
 
 - [Tailwind integrated](https://docs.astro.build/en/guides/integrations-guide/tailwind/)
