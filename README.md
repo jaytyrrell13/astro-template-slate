@@ -24,3 +24,7 @@ $ npm run build
 # preview build locally
 $ npm run preview
 ```
+
+## Support
+
+If you'd like to support the development of this template, you can [buy me a coffee](https://www.buymeacoffee.com/jaytyrrell).
