@@ -6,7 +6,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jaytyrrell.co',
+  site: 'https://localhost',
   integrations: [tailwind(), sitemap(), robotsTxt({
     host: true
   })],

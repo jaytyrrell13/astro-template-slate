@@ -1,20 +1,20 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import FormattedDate from '../../components/FormattedDate.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    params: { id: entry.id }, props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 <Layout title={entry.data.title}>
-	<h1 slot="heading" class="font-serif text-4xl lg:text-5xl text-white">{entry.data.title}</h1>
+  <h1 slot="heading" class="font-serif text-4xl lg:text-5xl text-white">{entry.data.title}</h1>
 
   <p class="mb-4 text-slate-700 text-base"><strong>Posted</strong>: <FormattedDate date={entry.data.pubDate} /></p>
 
